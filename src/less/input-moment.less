@@ -31,11 +31,11 @@
     button {
       float: left;
       width: 50%;
-      color: @color-blue;
+      color: @color-orange;
       text-align: center;
       font-size: 16px;
       padding: 7px;
-      border: 1px solid @color-blue;
+      border: 1px solid @color-orange;
       border-radius: 3px;
 
       &:first-child {
@@ -50,7 +50,7 @@
 
       &.is-active {
         color: #ffffff;
-        background-color: @color-blue;
+        background-color: @color-orange;
       }
     }
   }
@@ -72,11 +72,60 @@
     display: block;
     margin-top: 10px;
     width: 100%;
-    background-color: @color-blue;
+    background-color: @color-orange;
     padding: 12px 0;
     text-align: center;
     color: #ffffff;
     font-size: 16px;
     border-radius: 3px;
+  }
+}
+
+.m-calendar{
+  .toolbar{
+    button{
+      border: 1px solid @color-orange;
+      background: @color-orange;
+    }
+    .current-date{
+      color: @color-orange;
+    }
+  }
+  .current-day{
+    color: @color-orange;
+  }
+  thead{
+    td{
+      color: @color-orange;
+    }
+  }
+  tbody{
+    td{
+      &:hover{
+        background: @color-orange;
+        border-color: @color-orange;
+      }
+    }
+  }
+}
+
+.m-time{
+  .time{
+    background-color: @color-orange;
+  }
+  .separater{
+    color: @color-orange;
+  }
+  .time-text{
+    color: @color-orange;
+  }
+}
+
+.u-slider-time{
+  .value{
+    background-color: @color-orange;
+  }
+  .handle:after{
+    border-color: @color-orange;
   }
 }

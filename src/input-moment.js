@@ -16,7 +16,10 @@ module.exports = React.createClass({
   getDefaultProps() {
     return {
       prevMonthIcon: 'ion-ios-arrow-left',
-      nextMonthIcon: 'ion-ios-arrow-right'
+      nextMonthIcon: 'ion-ios-arrow-right',
+      minuteStep: 1.0,
+      maxTime: "00:00",
+      minTime: "00:00"
     };
   },
 
@@ -28,10 +31,10 @@ module.exports = React.createClass({
       <div className="m-input-moment">
         <div className="options">
           <button type="button" className={cx('ion-calendar im-btn', {'is-active': tab === 0})} onClick={this.handleClickTab.bind(null, 0)}>
-            Date
+            Dagur
           </button>
           <button type="button" className={cx('ion-clock im-btn', {'is-active': tab === 1})} onClick={this.handleClickTab.bind(null, 1)}>
-            Time
+            Tími
           </button>
         </div>
 
@@ -47,12 +50,15 @@ module.exports = React.createClass({
             className={cx('tab', {'is-active': tab === 1})}
             moment={m}
             onChange={this.props.onChange}
+            minuteStep={this.props.minuteStep}
+            maxTime={this.props.maxTime}
+            minTime={this.props.minTime}
           />
         </div>
 
-        <button type="button" className="im-btn btn-save ion-checkmark"
+        <button type="button" className="im-btn btn-save"
           onClick={this.handleSave}>
-          Save
+          Vista
         </button>
       </div>
     );

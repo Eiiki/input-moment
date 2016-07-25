@@ -33,6 +33,9 @@ var App = React.createClass({
           moment={this.state.m}
           onChange={this.handleChange}
           onSave={this.handleSave}
+          minuteStep={5.0}
+          maxTime={"23:00"}
+          minTime={"09:00"}
         />
         </form>
       </div>
